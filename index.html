@@ -81,6 +81,29 @@
     <div class="header">
       <h1>Login</h1>
     </div>
-    <form class="form">
-      <input type="text" placeholder="Username" required>
-      <input type="password" placeholder="Password
+      <form class="form">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p class="message">Belum punya akun? <a href="#">Daftar disini</a></p>
+      </form>
+      <script>
+        // JavaScript untuk mengatur interaksi form login
+        var form = document.querySelector('.form');
+        var message = document.querySelector('.message');
+        var registerLink = message.querySelector('a');
+    
+        registerLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          form.classList.add('register-form');
+          form.classList.remove('login-form');
+          message.innerHTML = 'Sudah punya akun? <a href="#">Masuk disini</a>';
+        });
+      </script>
+      <div class="footer">
+        Copyright &copy; 2021 | All Rights Reserved
+      </div>
+    </div>
+    </body>
+    </html>
+    
