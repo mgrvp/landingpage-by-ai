@@ -12,73 +12,69 @@
       background-color: #F1F1F1;
     }
     .container {
-      width: 1000px;
+      width: 500px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-    }
-    .header {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 32px;
+      margin-top: 100px;
     }
     .form {
-      width: 500px;
       background-color: white;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      padding: 20px;
+      padding: 40px;
     }
-    .form h2 {
+    .form h1 {
       text-align: center;
-      margin: 0;
-      font-size: 24px;
+      font-size: 32px;
+      margin: 0 0 20px;
     }
     .form .input-group {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       margin: 20px 0;
     }
     .form .input-group label {
-      width: 120px;
+      width: 100px;
       font-size: 14px;
+      color: #666;
     }
     .form .input-group input {
-      flex: 1;
-      padding: 12px 20px;
-      margin: 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      width: calc(100% - 110px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      outline: none;
     }
     .form .input-group input:focus {
-      border-color: #555;
+      border-color: #333;
     }
-    .form .button {
-      display: block;
-      width: 100%;
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 20px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .form .button:hover {
-      background-color: #45a049;
-    }
-    .form .link {
+    .form .button-group {
       text-align: center;
       margin-top: 20px;
-      font-size: 14px;
     }
-    .form .link a {
-      color: #555;
-      text-decoration: none;
+    .form .button-group button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+    }
+    .form .button-group button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h1>Login</h1>
+      <form action="#">
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div class="input-group
