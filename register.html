@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Register Page</title>
+  <style>
+    /* CSS untuk mengatur layout dan design register page */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #F1F1F1;
+    }
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    .form {
+      width: 100%;
+      max-width: 400px;
+      padding: 15px;
+      margin: auto;
+    }
+    .form input[type="text"],
+    .form input[type="password"],
+    .form input[type="email"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    .form button:hover {
+      opacity: 0.8;
+    }
+    .form .message {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+    }
+    .form .message a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    .form .login-form {
+      display: none;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Daftar Akun</h1>
+    </div>
+    <form class="form">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Daftar</button>
+        <p class="message">Sudah punya akun? <a href="#">Masuk disini</a></p>
+      </form>
+      <script>
+        // JavaScript untuk mengatur interaksi form pendaftaran
+        var form = document.querySelector('.form');
+        var message = document.querySelector('.message');
+        var loginLink = message.querySelector('a');
+    
+        loginLink.addEventListener('click', function(event) {
+          event.preventDefault();
+          form.classList.add('login-form');
+          form.classList.remove('register-form');
+          message.innerHTML = 'Belum punya akun? <a href="#">Daftar disini</a>';
+        });
+      </script>
+      <div class="footer">
+        Copyright &copy; 2021 | All Rights Reserved
+      </div>
+    </div>
+    </body>
+    </html>
+    
